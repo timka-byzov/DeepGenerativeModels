@@ -115,7 +115,7 @@ class CelebADataset(Dataset):
         if not os.path.isfile(attr_file_path):
             print("Downloading annotations for CelebA...")
             annotation_url = "https://drive.google.com/drive/folders/0B7EVK8r0v71pOC0wOVZlQnFfaGs"
-            gdown.download_folder(annotation_url, output=annotation_folder, quiet=False, fuzzy=True)
+            gdown.download_folder(annotation_url, output=annotation_folder, quiet=False)
         else:
             print(f"Annotations already exist in '{annotation_folder}'. Skipping download.")
 
